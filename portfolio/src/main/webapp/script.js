@@ -25,4 +25,12 @@ function addRandomGreeting() {
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
+
+  // Week 2 Step 3
+  async function getHelloWorld() {
+    const responseFromServer = await fetch('/hello');
+    const stats = await responseFromServer.json();
+
+    const statsListElement = document.getElementById('greeting-container');
+  }
 }
