@@ -2,18 +2,52 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Nicolas' Portofolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+  <body class = "index">
+      <!-- Navigation -->
+	<nav>
+	  <ul>
+		<li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+		<li><a href="contact.html">Contact</a></li>
+          </ul>
+	</nav>
+    <!-- Link bar --> 
+    <aside class="right">
+        <img class="icons" src="resources/github.jpeg" align="absmiddle" />
+        <a href="https://github.com/NicolasReelingB" target="_blank">My github account</a>
+        <br>
+        <img class="icons" src="resources/linkedin.png" align="absmiddle" />
+        <a href="https://www.linkedin.com/in/nicolas-reeling-brouwer-diez-795759198/" target="_blank">My linkedin account</a>
+        </div>
+    </aside>
+
+     <!-- Brief about me --> 
+    <div>
+      <h1>Nicolas' Portofolio</h1>
+      <hr>
+      <img src="resources/myface.jpg" style="width:150px;height:150px;border-radius:150px;outline: solid;float: right;" />
+      <h2 style="text-align: left">Introduction</h2>
+      <div style="margin-left:150px">
+        <p>Hello! Welcome to this brief Portofolio. I am a second year CS student in Mexico. </p>
+      </div>
+      
+      <hr>
+      <h2 style="text-align: left">About me</h2>
+      <div style="margin-left:150px">
+        <p>Honestly talking abour yourself can be quite the complicated task so I'll try to make it brief. I'm currently 20 and as previously mentioned studying CS. One of my biggest weaknesses is connecting with others so I entered this program hoping to help that along. Currently I spend most of my time reading, building different projects or playing videogames (although by the time of making this portfolio University finals aren't leaving much time for anything else.) </p>
+      </div>
+      <hr>
+      <div id="content">
+        <p>Click here to learn a little about me:</p>
+        <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+        <button onclick="addRandomGreeting()">Clickity click</button>
+        <div id="greeting-container"></div>
+      </div>
     </div>
   </body>
 </html>
+
