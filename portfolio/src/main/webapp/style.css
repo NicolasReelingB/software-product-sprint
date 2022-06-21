@@ -1,13 +1,10 @@
-#content {
+.content {
     font-family: "Google Sans", "Roboto", "San Francisco", sans-serif;
     margin-left: auto;
     margin-right: auto;
     width: 650px;
     text-align: center;
-  }
-  
-  body {
-    background-image: url("resources/background.jpg");
+    position: relative;
   }
   
   body.index {
@@ -65,6 +62,7 @@
     background-color: darkslategray;
     position: fixed;
     text-align: left;
+    z-index: +1;
   }
   
   /* Flip card CSS */
@@ -110,8 +108,24 @@
   .flip-card-padding {
    padding: 10px;
   }
-  /*Using a flexbox to center the cards*/
-  .flex-cards{
+/*Using a flexbox to center the cards*/
+.flex-cards{
     display: flex;
-   justify-content: center;
-  }
+    justify-content: center;
+}
+
+input, textarea {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+#message-container {
+    color: blue;
+}

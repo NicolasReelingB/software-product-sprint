@@ -3,18 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <title>Nicolas' Portofolio</title>
+    <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body class = "index">
-      <!-- Navigation -->
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-				<li><a href="contact.html">Contact</a></li>
-          </ul>
-		</nav>
     <!-- Link bar --> 
     <aside class="right">
         <img class="icons" src="resources/github.jpeg" align="absmiddle" />
@@ -29,24 +22,105 @@
     <div>
       <h1>Nicolas' Portofolio</h1>
       <hr>
-      <img src="resources/myface.jpg" style="width:150px;height:150px;border-radius:150px;outline: solid;float: right;" />
+      <img src="resources/myface.jpg" style="width:150px;height:150px;border-radius:150px;outline:solid;float:right;" />
       <h2 style="text-align: left">Introduction</h2>
       <div style="margin-left:150px">
-        <p>Hello! Welcome to this brief Portofolio. I am a second year CS student in Mexico. </p>
+        <p>Hello! Welcome to this brief Portfolio. I am a second year CS student in Mexico. </p>
       </div>
-      
       <hr>
       <h2 style="text-align: left">About me</h2>
       <div style="margin-left:150px">
-        <p>Honestly talking abour yourself can be quite the complicated task so I'll try to make it brief. I'm currently 20 and as previously mentioned studying CS. One of my biggest weaknesses is connecting with others so I entered this program hoping to help that along. Currently I spend most of my time reading, building different projects or playing videogames (although by the time of making this portfolio University finals aren't leaving much time for anything else.) </p>
+        <p>Honestly talking about yourself can be quite the complicated task so I'll try to make it brief. I'm currently 20 and as previously mentioned studying CS. One of my biggest weaknesses is connecting with others so I entered this program hoping to help that along. Currently I spend most of my time reading, building different projects or playing videogames. I've found my interests and passions greatly leaning towards learning and applying new tools to small projects and see what comes out of it. </p>
       </div>
       <hr>
-      <div id="content">
+    </div>
+    <!-- Projects Section -->
+    <div id="content">
+        <h1>Projects</h1>
+        <div class = "flex-cards">
+            <div class = "flip-card-padding">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="resources/BetterYou.png" alt="Avatar" style="width:100%;height:100%;">
+                      </div>
+                      <div class="flip-card-back">
+                        <div style="padding: 20px;">
+                            <h1>BetterYou</h1>
+                            <i>Online Dashboarding Application</i>
+                            <p>A web project in which we built a functional platform for a doctor to manage the health records and tests of all patients he was currently seeing. With added integration to visualize the data and upload data directly from excel to not disrupt his workflow.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class = "flip-card-padding">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="resources/HoningFun.png" alt="Avatar" style="width:100%;height:100%;">
+                      </div>
+                      <div class="flip-card-back">
+                        <div style="padding: 20px;">
+                            <h1>Sharpening the Mind</h1>
+                        <i>Games designed to help hone the mind</i>
+                        <p>Prototype developed in Unity with 5 fully functional games all designed with the intent of helping combat the decay of the elderly's mental faculties. With clear defined metrics for them to analyze and a variety of difficulty levels for people at different points.</p>
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class = "flip-card-padding">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="resources/SPSPortfolio.png" alt="Avatar" style="width:100%;height:100%;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Personal Portfolio</h1>
+                        <i>Google SPS Portfolio</i>
+                        <p>A webpage development project. Made using HTML, CSS, and JavaScript. Developed during Google Software Product Sprint. This very webpage is the project.</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <h1 align="center"> Let's Talk!</h1>
+        <form action='/new-message' method="POST">
+            <fieldset>
+                <label>Enter Your First Name:
+                    <input type="text" name="firstName" required />
+                </label>
+                <label>Enter Your Last Name:
+                    <input type="text" name="lastName" required />
+                </label>
+                <label>Enter Your Email:
+                    <input type="email" name="email" required />
+                </label>
+
+                <label style="color: red;"><input type="radio" name="favColor" value="Red" class="inline" /> Favorite color is Red</label>
+                <label style="color: blue"><input type="radio" name="favColor" value="Blue" class="inline" /> Favorite color is Blue</label>
+            
+                <br>
+                <label>Leave a Message: <textarea name="message" rows="3" cols="30" placeholder="This is a message"></textarea> </label>
+                <input type="submit" value="Submit" />
+            </fieldset>
+        </form>
+    </div>
+    <hr>
+    <div id="content">
         <p>Click here to learn a little about me:</p>
-        <p>Click <a href="/hello">here</a> to see content created by server code.</p>
         <button onclick="addRandomGreeting()">Clickity click</button>
         <div id="greeting-container"></div>
-      </div>
+        
+        <p>To see random phrases brought from a server</p>
+        <button type="button" class="btn btn-light" onclick="getMessage()"> Click Here </button>
+        <div id="message-container"></div>
+
+        <p>To see the messages left by visitors of the site click <a href="https://nreeling-sps-summer22.uc.r.appspot.com/MessageBoard.html">here</a></p>
     </div>
   </body>
 </html>
