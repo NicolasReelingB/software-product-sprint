@@ -17,26 +17,31 @@
 			<li><a href="contact.html">Contact</a></li>
         </ul>
 	</nav>
-    <div class="" content">
+    <div>
         <h3 align="center"> Let's Talk!</h3>
-        <form action='/form-handler' method="POST">
-            <fieldset>
-                <label>First Name:
-                    <input type="text" name="first-name" required />
-                </label>
-                <label>Last Name:
-                    <input type="text" name="last-name" required />
-                </label>
-                <label>Email:
-                    <input type="email" name="email" required />
-                </label>
-            </fieldset>
-            <fieldset>
-                <label>Leave a message::
-                    <textarea name="message" rows="3" cols="30" placeholder="This is where a message is typed"></textarea>
-                </label>
-            </fieldset>
-            <input type="submit" value="Submit" />
+        <form action="/new-message" method="POST" id="message-form">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com"
+                    required />
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Leave a message for me</label>
+                <textarea class="form-control" name="message" id="message" rows="3" placeholder="your message"
+                    required></textarea>
+            </div>
+            <div class="mb-3">
+                Just for fun:
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="forFun" id="coffee" value="coffee" />
+                    <label class="form-check-label" for="coffeee"> Coffee </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="forFun" id="tea" value="tea" />
+                    <label class="form-check-label" for="tea"> Tea </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </body>
